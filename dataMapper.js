@@ -13,4 +13,5 @@ const dataMapper = {
     },
 };
 
-module.exports = dataMapper;
+module.exports = dataMapper
+
