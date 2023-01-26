@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menu</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/drinks.css">
+        <link rel="stylesheet" href="/css/drink-details.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="app">
+            <div id="background"></div>
+            <div class="app-content">
+                <div class="drink-list">
+                    <div class="drink-list-form">
+                        <span class="material-icons">
+                            search
+                        </span>
+                        <input type="text" class="drink-search-field" name="drink-search-field"
+                               id="drink-search-field" />
+                    </div>
+                    <div class="drink-list-table">
+                        <table class="drink-list-search-result">
+                            <thead>
+                                <tr>
+                                    <th class="drink-list-header-cell-name">
+                                        Name
+                                    </th>
+                                    <th>
+                                        Type
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% drinksList.forEach(cocktail => { %>
+                                <%- include('partials/listElement', { cocktail }); %>
+                                <% }); %>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="drink-list-detail">
+                        <%- include('partials/drink') %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="/js/script.js"></script>
+    </body>
+
+</html>

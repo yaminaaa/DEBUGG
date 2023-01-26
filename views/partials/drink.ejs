@@ -1,0 +1,29 @@
+<div class="drink-detail">
+    <div class="drink-detail-title">
+        <div class="drink-detail-name">
+            <%= drink.name %>
+        </div>
+        <div class="drink-detail-subname">
+            <%= drink.type %>
+        </div>
+    </div>
+    <div class="drink-detail-pic">
+        <!-- TODO prendre des photos la prochaine fois >_< -->
+    </div>
+    <div class="drink-detail-ingredients">
+        <ul>
+            <% drink.ingredients.forEach(ingredient => { %>
+            <li class="drink-detail-ingredient">
+                <%= ingredient %>
+            </li>
+            <% }); %>
+        </ul>
+    </div>
+    <div class="drink-detail-tags">
+        <% drink.tags.forEach(tag => { %>
+        <span class="drink-detail-tag">
+            <%= tag %>
+        </span>
+        <% }); %>
+    </div>
+</div>
